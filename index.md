@@ -4,17 +4,21 @@ layout: home
 nav_order: 1
 ---
 
-# Welcome to Nature Sense
+# Welcome to Naturesense
 
 > Where nature meets technology
 
 ![banner](images/banner.png)
 
+## Naturesense
+
 The Nature Sense concept is to use commodity hardware and innovative software to provide high-power and ....
 
 *to be completed*
 
-The first Nature Sense project is a low-cost **AI-based Insect Camera Trap**, which can be used for research purposes, in agriculture and in other areas;  to count and identify insects. 
+## AI Camera Trap
+
+The first Naturesense project is a low-cost **AI-based Insect Camera Trap**, which can be used to count and identify insects for research purposes, in agriculture and in other areas.
 
 The trap is designed to be easy to use. It is managed using bluetooth and a simple phone app, and the recorded data is written to a USB memory stick, which can be read offline for further processing.
 

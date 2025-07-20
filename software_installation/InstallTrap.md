@@ -7,13 +7,18 @@ nav_order: 3
 
 # Installing the Trap Software
 
-The Trap software is written in python and it available in the github repository:
+The Trap software is written in python and is available in the GitHub repository:
 
 [https://github.com/nature-sense/yolo-trap-py.git](https://github.com/nature-sense/yolo-trap-py.git)
 
-The software in the trap is simple a clone of this repository, and it is created as follows:
+The software in the trap is simply a clone of this repository. The respository contains an installation script, so the steps to install it are simply:
 
-Firstly ssh into the trap e.g
+- Create a clone of the software on the trap.
+- Run the install script.
+
+Thereafter the software can be updated by simply pulling the latest version from GitHub.
+
+To install the software ssh into the trap e.g
 
 ```shell
 ssh trap@mytrap.local
@@ -28,11 +33,12 @@ git config --global init.defaultBranch main
 git init
 git remote add origin  https://github.com/nature-sense/yolo-trap-py.git
 git pull origin main
+git branch --set-upstream-to=origin/main main
 ```
 
 This will have created a clone of the github repository on the trap.
 
-The final step is to run the install script which will load all required software, and configure the system.
+Now run the install scrip, this will load all the additional required software and configure the system.
 
 ```shell
 ./install.sh
@@ -49,3 +55,7 @@ sudo reboot
 On restart the trap should be visible in the AI Trap phone app:
 
 ![mytrap](../images/mytrap.png)
+
+
+
+# Updating the Software

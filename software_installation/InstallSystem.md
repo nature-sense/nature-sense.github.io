@@ -9,31 +9,23 @@ nav_order: 2
 
 # Installing the System
 
-Raspberry Pi OS is installed on the Compute Module's internal eMMC. The eMMC can be made to act like a memory stick. this is done in 2 steps:
-
-## Flash Mode
-
-The board must be put into Flash Mode.  There is a button next to the USB-A socket to do this.
-
-![flash-mode](../images/flash-mode.png)
-
-- Plug a USB-C cable into the module but leave the other end disconnected. Using a small screw-driver or similar and press and hold the flash-mode button.
-- With the button still pressed plug the other end of the USB-C cable into your computer.
-- Release the button. 
-
-The Compute Module is now in "flash mode"
-
-
+Raspberry Pi OS is installed on the Compute Module's internal eMMC. The eMMC can be made to act like and the OS can be flashed directly to it using the standard raspberry tools.
 
 ## rpiboot
 
-The next step is to run a utility program - `rpiboot` which configures the eMMC to look like a memory stick.
+This process requires a command line tool to put the eMMC into the right mode. This tool must be  installed manually.  Unfortunately, on the Mac there is no installable version of this tool, and it must be built locally.  
 
-Unfortunately, on the Mac there is no installable version of this tool, and it must be built locally.  For other platforms see  [here](https://github.com/raspberrypi/usbboot).
+> [!IMPORTANT]
+>
+> You only need to do this once. It permanently installs rpiboot on your computer, so for successive uses you can simply run it.
+
+#### 
+
+#### Installation on a Mac
 
 It must be built from the command line (Terminal) and the steps are as follows:
 
-Instrall `brew` if you don't have it already.
+Install `brew` if you don't have it already.
 
 ```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -49,9 +41,29 @@ brew install pkg-config
 sudo make INSTALL_PREFIX=/usr/local install
 ```
 
+#### Other Platforms
 
+For other platforms see  [here](https://github.com/raspberrypi/usbboot).
 
-When the Compute Module is in flash mode run rpiboot as follows:
+## Flashing the Software
+
+### Flash Mode
+
+The first step is to put the board into Flash Mode.  There is a button next to the USB-A socket to do this.
+
+![flash-mode](../images/flash-mode.png)The steps are as follows:
+
+- Plug a USB-C cable into the module but leave the other end disconnected. Using a small screw-driver or similar and press and hold the flash-mode button.
+- With the button still pressed plug the other end of the USB-C cable into your computer.
+- Release the button. 
+
+The Compute Module is now in "flash mode". 
+
+DO NOT DISCONNECT THE TRAP FROM YOUR COMPUTER.
+
+## rpiboot
+
+Now the Compute Module is in flash mode you can run rpiboot to configure rhe eMMC as a memory stick:
 
 ```
 sudo rpiboot
@@ -89,7 +101,13 @@ Second stage boot server done
 (base) steve@elnor ~ %
 ```
 
-**DO NOT UNPLUG THE CAMERA AT THIS POINT.**
+
+
+> [!CAUTION]
+>
+> The stap can be a little bit tricky and may have to repeated a few times before it is successful.
+
+DO NOT DISCONNECT THE TRAP FROM YOUR COMPUTER.
 
 ## Raspberry Pi Imager
 
