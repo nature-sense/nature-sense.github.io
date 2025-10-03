@@ -9,7 +9,7 @@ nav_order: 3
 
 The Trap software is written in python and is available in the GitHub repository:
 
-[https://github.com/nature-sense/yolo-trap-py.git](https://github.com/nature-sense/yolo-trap-py.git)
+[https://github.com/nature-sense/ai-trap-py.git](https://github.com/nature-sense/ai-trap-py.git)
 
 The software in the trap is simply a clone of this repository. The respository contains an installation script, so the steps to install it are simply:
 
@@ -31,7 +31,7 @@ Then issue the following commands
 sudo apt install -y git
 git config --global init.defaultBranch main
 git init
-git remote add origin  https://github.com/nature-sense/yolo-trap-py.git
+git remote add origin  https://github.com/nature-sense/ai-trap-py.git
 git pull origin main
 git branch --set-upstream-to=origin/main main
 ```
@@ -51,10 +51,6 @@ Finally reboot the sysyem
 ```shell
 sudo reboot
 ```
-
-On restart the trap should be visible in the AI Trap phone app:
-
-![mytrap](../images/mytrap.png)
 
 
 
