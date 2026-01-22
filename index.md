@@ -48,7 +48,7 @@ The Naturesense software and 3d-printer files are available  [here](https://gith
 
 The first Naturesense project is a low-cost **AI-based Insect Camera Trap**, which can be used to count and identify insects for research purposes, in agriculture and in other areas.
 
-The trap is designed to be easy to use. It provides a WiFi interfact and is controlled by an iPhone or iPad mobile application.
+The trap is designed to be easy to use. It provides a WiFi interface and is controlled by an iPhone or iPad mobile application.
 
 The trap is designed as the first stage in an insect identification/counting workflow. Using a camera and an ML model, the trap will detect and track individual insects within its field of view. The trap takes  images of each insect it observes, and attaches metadata. These images/metadata can then be used offline in an insect classification workflow.
 
