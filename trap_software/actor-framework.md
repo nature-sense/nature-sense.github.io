@@ -1,4 +1,9 @@
+---
+title: Actor Framework
+parent: Trap Software
+nav_order: 1
 
+---
 
 # Actor Framework
 
@@ -10,7 +15,7 @@ The fundamentai building block of the actor frameworks is an **Actor**.
 
 An **Actor** is a processing element that receives messages from a mailbox, perform some processing on the message, and optionally sends messages to one or more other actors via their mailboxes.  The actor processes one message at a time, and any state associated with the processing is purely local to the actor (there is no global state in an actor system).
 
-![actos](images/actos.png)
+![actors](../images/actors.png)
 
 An actor can handle different message types,  which are all sent through the same mailbos, and processed in the order they are received.
 

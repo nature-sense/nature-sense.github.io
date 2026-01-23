@@ -1,3 +1,10 @@
+---
+title: Detection Flow
+parent: Trap Software
+nav_order: 2
+
+---
+
 # Detection Flow
 
 ## Introduction
@@ -28,11 +35,11 @@ There are 4 stages in the Detection Flow.
 
 The 4 stages of the data flow are implemented as independent modules which pass information between themselves using message queues (or channels). The following diagram shows these components.
 
-![detection-flow](images/detection_flow.png)
+![detection-flow](../images/detection_flow.png)
 
 
 
-![ai-camera-flow](images/ai-camera-flow.png)
+![ai-camera-flow](../images/ai-camera-flow.png)
 
 
 
@@ -74,7 +81,7 @@ Requests are allocated statically and are reused as the camera runs.
 
 The following diagram shows a simplified view of a Request object.
 
-![request](images/request.png)
+![request](../images/request.png)
 
 A Request contains a field **buffers**  which contains a map of **Streams to Framebuffers**. This tells libcamera what to capture and where to write the data.
 
@@ -88,6 +95,6 @@ Thes is passed to the application for further processing. The Request is passed 
 
 
 
-![request_loop](images/request_loop.png)
+![request_loop](../images/request_loop.png)
 
 This processing loop will define the speed (in terms of frames per second) the project can achieve, and this will be largely controlled by the overll time it takes the application to process each frame. This can be optimised by parallelising the downstream application processing.
